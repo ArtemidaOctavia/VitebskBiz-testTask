@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test task #2,3</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="lunches" id="lunches">
+        <div class="lunches__header">
+            <div class="lunches__title-wrapper">
+                <a href="https://carte.by/vitebsk/" class="lunches__title">Бизнес-ланчи в Витебске</a>
+                <a href="https://carte.by/vitebsk/"><img class="lunches__logo" src="carte.svg"></a>
+            </div>
+            <nav class="navigation__arrows">
+                <img @click="scrollLeft"
+                     :class="[ sliderPosition === 0 ?
+                       'navigation__arrow_disabled' : '', 'navigation__arrow']"
+                     src="arrowLeft.svg">
+                <img @click="scrollRight"
+                     :class="[ sliderPosition === sliderMovementCap ?
+                      'navigation__arrow_disabled' : '', 'navigation__arrow']"
+                     src="arrowRight.svg">
+            </nav>
+        </div>
+        <div class="lunches__restaurants">
+            <div class="lunches__slider">
+                <div class="lunches__restaurants-item" v-for="restaurant in restaurants">
+                    <div class="lunches__restaurants-picture" v-bind:style="{ backgroundImage: 'url(' + restaurant.picture + ')' }">
+                        <a v-bind:href="restaurant.link"
+                           class="lunches__restaurant-name">{{restaurant.name}}</a>
+                        <a v-bind:href="restaurant.link"
+                           class="lunches__restaurant-address">{{restaurant.address}}</a>
+                        <span class="lunches__restaurant-businessHours">{{restaurant.businessHours}}</span>
+                    </div>
+                    <div class="lunches__restaurant-menu">
+                        <ul class="lunches__restaurant-menu-dishes">
+                            <li v-for="dish in restaurant.dishes"
+                                class="lunches__restaurant-menu-dish">
+                                <span class="lunches__restaurant-dish-name">{{dish.dishName}}</span>
+                                <span class="lunches__restaurant-dish-price">{{dish.dishPrice}}</span>
+                            </li>
+                        </ul>
+                        <span class="lunches__menu-price">{{restaurant.price}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+  new Vue(
+    {
+      el: '#lunches',
+      data: {
+        restaurants: [],
+        sliderPosition: 0,
+        sliderMovementCap: null
+      },
+      created: function () {
+        axios.get(`https://api.jsonbin.io/b/5f11675cc58dc34bf5d515cc`).then((response) => {
+          this.restaurants = response.data
+        })
+      },
+      methods: {
+        scrollLeft() {
+          if (this.sliderPosition >= 0) {
+            return
+          }
+          let slider = document.querySelector('.lunches__slider');
+          slider.style = `transform: translate(${this.sliderPosition = this.sliderPosition + 25}%)`
+        },
+        scrollRight() {
+          this.sliderMovementCap = -((this.restaurants.length - 4) * 25);
+          if (this.sliderPosition <= this.sliderMovementCap) {
+            return
+          }
+          let slider = document.querySelector('.lunches__slider');
+          slider.style = `transform: translate(${this.sliderPosition = this.sliderPosition - 25}%)`;
+        }
+      }
+    }
+  )
+</script>
+</html>

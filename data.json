@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Домино",
+    "link": "https://domino.vitebsk.biz/",
+    "picture": "https://carte.by/source/photos/2019/10/25/9ed5e-31c93d35f0ebf9bc0a76edda2e892b52_p.jpg",
+    "address": "Витебск, пр. Победы 9",
+    "businessHours": "12:00 - 16:00",
+    "dishes": [
+      {
+        "dishName": "Салат с курицей и грибами",
+        "dishPrice": null
+      },
+      {
+        "dishName": "Суп куриный с рисом",
+        "dishPrice": null
+      },
+      {
+        "dishName": "Филе куриное 'Сказка' с картофельным пюре; хлеб",
+        "dishPrice": null
+      }
+    ],
+    "price": "7,00 р"
+  },
+  {
+    "name": "Витебский трактир",
+    "link": "https://traktir.vitebsk.biz/",
+    "picture": "https://carte.by/source/photos/2015/11/30/traktir_p.jpg",
+    "address": "Витебск, ул. Суворова, 2",
+    "businessHours": "12:00 - 16:00",
+    "dishes": [
+      {
+        "dishName": "Салат 'Зелёный'",
+        "dishPrice": "3,00"
+      },
+      {
+        "dishName": "Гаспачо",
+        "dishPrice": "3,00"
+      },
+      {
+        "dishName": "Котлета из форели с молодым картофелем, хлебом, комот",
+        "dishPrice": "4,00"
+      }
+    ],
+    "price": "10,00 р"
+  },
+  {
+    "name": "Ностальгия",
+    "link": "https://nostalgia.vitebsk.biz/",
+    "picture": "https://carte.by/source/photos/2020/03/11/c9fbfc8f431eab848379ad1b8b70b571_p.jpg",
+    "address": "Витебск, пр-т Московский, 86 ",
+    "businessHours": "12:00 - 16:00",
+    "dishes": [
+      {
+        "dishName": "Холодник со сметаной",
+        "dishPrice": null
+      },
+      {
+        "dishName": "Биточки из птицы",
+        "dishPrice": null
+      },
+      {
+        "dishName": "Картофель тушёный, капуста 'Провансаль'",
+        "dishPrice": null
+      }
+    ],
+    "price": "5,95 р"
+  },
+  {
+    "name": "Pizza Smile",
+    "link": "https://pizzasmile.vitebsk.biz/",
+    "picture": "https://carte.by/source/photos/2016/04/21/pitstsa-smayl-vitebsk-grin_p.jpg",
+    "address": "Витебск, ул. Чкалова, 35",
+    "businessHours": "12:00 - 15:00",
+    "dishes": [
+      {
+        "dishName": "Салат 'Весенний'",
+        "dishPrice": null
+      },
+      {
+        "dishName": "Суп грибной с перловой крупой",
+        "dishPrice": null
+      },
+      {
+        "dishName": "Котлета рубленая из птицы со сливочным соусом, картофель отварной",
+        "dishPrice": null
+      }
+    ],
+    "price": "7,00 р"
+  },
+  {
+    "name": "Кофе брейк",
+    "link": "https://vitebsk.biz/cafe/coffee-break/",
+    "picture": "https://carte.by/source/photos/2019/02/07/e1d9a67510caa5aca0de8ac2017e5c3c_p.jpg",
+    "address": "Витебск, ул. Ленина, 48",
+    "businessHours": "11:00 - 16:00",
+    "dishes": [
+      {
+        "dishName": "Салат 'Слоеный'",
+        "dishPrice": null
+      },
+      {
+        "dishName": "Борщ 'Домашний'",
+        "dishPrice": null
+      },
+      {
+        "dishName": "Паста с курицей, компот ягодный",
+        "dishPrice": null
+      }
+    ],
+    "price": "5,50 р"
+  },
+  {
+    "name": "Васильки",
+    "link": "https://vasilki.vitebsk.biz/",
+    "picture": "https://carte.by/source/photos/2015/11/30/vasilki_p.jpg",
+    "address": "Витебск, пр-т Московский, 9, корп. 1",
+    "businessHours": "12:00 - 16:00",
+    "dishes": [
+      {
+        "dishName": "Салат из капусты с курицей и гренками",
+        "dishPrice": "2,10"
+      },
+      {
+        "dishName": "Рыбный суп со шпинатом",
+        "dishPrice": "2,10"
+      },
+      {
+        "dishName": "Мясо 'По-французски'",
+        "dishPrice": "3,60"
+      }
+    ],
+    "price": "7,80 р"
+  }
+]
